@@ -1,8 +1,9 @@
-class TaskcontrollerController < ApplicationController
+class TasksController < ApplicationController
 
   #creando el method uque hara que se puedan ver todos las tasks#index
   def index
-    @tasks = Task.all
+    @task = Task.all
 
   end
+
 end
