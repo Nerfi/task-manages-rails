@@ -1,1 +1,17 @@
-<h1> here you got your task <%= @tasks %></h1>
+<h1> here you got your task <% @tasks.each do |task| %>
+  <%= task[:title]%>
+
+  <%end%>
+</h1>
+<%= link_to "back to list", tasks_path %>
+
+
+<h1> here you got your tasks</h1>
+<ul>
+<% @tasks.each do |task| %>
+<li><%= task[:title] %></li>
+<% end %>
+
+</ul>
+<%= link_to "back to list", tasks_path %>
+
