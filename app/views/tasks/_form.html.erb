@@ -1,16 +1,7 @@
-<%= render 'form', task: @task %>
-<!-- <h2>Add a New Task</h2>
 
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %> -->
+<!-- CREAMOS UN PARTIAL '_FORM', YA QUE NEW Y EDIT COMPARTEN FORM, LO QUE HECEMOS ES DRY( DON'T REPEAT YOURSELF) -->
 
 
-<!--- ADDING A RENDER
 <%= form_for(@task) do |f| %>
   <div class="form-group">
     <%= f.label :title %>
@@ -24,6 +15,5 @@
 
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
--->
 
 

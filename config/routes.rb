@@ -16,7 +16,7 @@ post 'tasks', to: "tasks#create"
   #get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
 
 # adding the edit and update
-get 'tasks/:id/edit', to: 'tasks#edit'
+get 'tasks/:id/edit', to: 'tasks#edit', as: :edit
 # patch is the post for updating the task
 patch 'tasks/:id', to: 'tasks#update'
 

@@ -8,7 +8,7 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
-    #redirect_to tasks_path(@task)
+
 
   end
 
@@ -41,6 +41,8 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     # never trust user data.
     @task.update(task_params)
+    # redirecting the user
+    redirect_to task_path(@task)
 
   end
 
