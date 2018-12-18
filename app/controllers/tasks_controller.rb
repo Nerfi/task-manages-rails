@@ -7,7 +7,10 @@ class TasksController < ApplicationController
   end
 
   def show
-    @tasks = Task [params[:id].to_i]
+    # elegimos @task porque lo que queremos
+    # es solamente una determinada.
+
+    @task = Task.find(params[:id])
 
 
   end

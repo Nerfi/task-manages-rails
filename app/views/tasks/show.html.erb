@@ -1,1 +1,15 @@
-<h1> more info abput the tasks on <%= @task[:id]%> </h1>
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+
+<!--- esto es para editarlo
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <%= f.submit %>
+<% end %>
+-->
