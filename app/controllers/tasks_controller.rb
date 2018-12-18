@@ -32,6 +32,18 @@ class TasksController < ApplicationController
 
   end
 
+  def edit
+    @task = Task.find(params[:id])
+
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    # never trust user data.
+    @task.update(task_params)
+
+  end
+
   private
   #definimos un method privado para saber que la
   #creacion viene de nuestra pagina web.
