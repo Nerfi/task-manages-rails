@@ -20,5 +20,6 @@ get 'tasks/:id/edit', to: 'tasks#edit', as: :edit
 # patch is the post for updating the task
 patch 'tasks/:id', to: 'tasks#update'
 
+# adding the delete route
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
