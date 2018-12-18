@@ -1,16 +1,10 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<%= link_to "bakc to tasks", tasks_path %>
-
-<!--- esto es para editarlo
+<h2>Add a New Task</h2>
 
 <%= form_for(@task) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
-
   <%= f.label :details %>
   <%= f.text_field :details %>
-
   <%= f.submit %>
 <% end %>
--->
+
