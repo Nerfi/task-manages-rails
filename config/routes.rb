@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  #resources :tasks
+  #RESOURCES DOES NOT WORK CHECK OUT AGAIN
  # get 'index', to: 'tasks#index'
 
 
@@ -13,7 +16,7 @@ post 'tasks', to: "tasks#create"
 
   # showing one specific task
   get 'tasks/:id', to: 'tasks#show', as: :task
-  #get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
+  get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
 
 # adding the edit and update
 get 'tasks/:id/edit', to: 'tasks#edit', as: :edit

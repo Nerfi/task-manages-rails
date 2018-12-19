@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+    before_action :set_task, only: [:show,  :update, :destroy]
+
 
   #creando el method uque hara que se puedan ver todos las tasks#index
   def index
@@ -62,6 +64,11 @@ class TasksController < ApplicationController
 
     def task_params
       params.require(:task).permit(:title,:details)
+
+    end
+
+    def set_task
+      @task = Task.find(params[:id])
 
     end
 
