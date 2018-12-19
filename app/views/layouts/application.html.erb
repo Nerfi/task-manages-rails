@@ -13,3 +13,30 @@
     <%= yield %>
   </body>
 </html>
+
+<!-- LEWAGON SOLUTION -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskManagesRails</title>
+    <%= csrf_meta_tags %>
+    <!-- LA UNICA DIFERENCIA ENTRE LO MIO Y LO DE LEWAGON ESQUE ELLOS HAN AÑADIDO LOS LINKS PARA BOOTSTRAP Y FOTN AWESOME PARA PODER DARLE FORMA AL TEXTO Y PARA QUE PODAMOS DARLE A LA BOX PARA SABER QUE UNA @TASK HA SIDO COMPLETA, MIRAR PAGINA PARA COMPRENDER MEJOR -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- AÑADIMOS UNA CLASS 'CONTAINER' PARA DARLE FORMA AL TEXTO QUE TENDREMOS EN TODAS LAS PAGINAS -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

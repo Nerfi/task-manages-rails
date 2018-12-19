@@ -1,9 +1,10 @@
+<!-- JUAN'S CODE
 <%= link_to "edit a task", edit_path %>
 
 <h2><%= @task.title %></h2>
 <p><%= @task.details %></p>
 
-<%= link_to "bakc to tasks", tasks_path %>
+<%= link_to "bakc to tasks", tasks_path %> -->
 
 <!--- esto es para editarlo
 
@@ -17,3 +18,24 @@
   <%= f.submit %>
 <% end %>
 -->
+
+<!-- LEWAGON SOLUTION -->
+
+<%= link_to edit_path(@task.id), class: 'pull-right btn btn-default' do %>
+  <i class="fa fa-pencil"></i> Edit this task
+<% end %>
+
+<h1><%= @task.title %></h1>
+
+<p class="well"><%= @task.details %></p>
+
+<% if @task.completed %>
+  <i class="fa fa-check-square-o"></i> This task is completed
+<% else %>
+  <i class="fa fa-square-o"></i> This task is not completed yet
+<% end %>
+
+<hr>
+<%= link_to tasks_path do %>
+  <i class="fa fa-history"></i> Back to list
+<% end %>

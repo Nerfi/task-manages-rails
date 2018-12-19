@@ -20,6 +20,7 @@ class TasksController < ApplicationController
     #una vez  que la hemos creado queremos que irnos a 'index', para poder enseñar la nueva creacion
     #por eso usamos 'redirect_to', para que una vez creado vayamos para alla.
     redirect_to tasks_path(@task)
+    #LEWAGON: recirect_to tasks_path
 
   end
 
@@ -40,7 +41,8 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Task.find(params[:id])
+    #LINEA 45 SOBRA SEGUN LA SOLUCION DE LEWAGON
+    #@task = Task.find(params[:id])
     # never trust user data.
     @task.update(task_params)
     # redirecting the user
@@ -49,7 +51,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find(params[:id])
+    #LINEA 55 SOBRA SEGUN LEWAGON
+    #@task = Task.find(params[:id])
     @task.destroy
 
     redirect_to tasks_path
@@ -63,7 +66,9 @@ class TasksController < ApplicationController
     # Never trust user data!
 
     def task_params
-      params.require(:task).permit(:title,:details)
+      #params.require(:task).permit(:title,:details)
+      #LEWAGON SOLUTION
+      params.require(:task).permit(:title,:details,:completed)
 
     end
 
